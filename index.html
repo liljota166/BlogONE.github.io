@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<style id="webmakerstyle">
+/* ============================================================
+   ESTILOS GENERALES
+   Aquí controlas todo el aspecto general de la página.
+   ============================================================ */
+body {
+    margin: 0;
+    padding: 0;
+
+    /* 🎨 COLOR DE FONDO (puedes cambiarlo)
+       Negro suave → #0d0d0d
+       Negro total → #000000
+       Gris oscuro → #1a1a1a
+    */
+    background: #1f1b1b;
+
+    /* 🎨 COLOR DEL TEXTO
+       Blanco → #ffffff
+       Gris claro → #dcdcdc
+    */
+    color: #ffffff;
+
+    /* 🖋️ FUENTE PRINCIPAL (puedes cambiarla)
+       Ejemplos:
+       Arial, sans-serif
+       'Poppins', sans-serif
+       'Roboto', sans-serif
+    */
+    font-family: Arial, sans-serif;
+}
+
+/* ============================================================
+   HEADER (parte de arriba de la página)
+   ============================================================ */
+header {
+    /* 🎨 COLOR DE FONDO DEL HEADER
+       Azul fuerte → #0038a8
+       Azul más claro → #1a73e8
+       Azul medio → #0044cc
+    */
+    background: #0038a8;
+
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+
+    /* 🎨 COLOR DEL TEXTO DEL TÍTULO */
+    color: #ffffff;
+
+    font-size: 2rem; /* Cambia el tamaño del título */
+}
+
+/* ============================================================
+   CONTENIDO PRINCIPAL
+   ============================================================ */
+main {
+    padding: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* ============================================================
+   BOTÓN PRINCIPAL
+   ============================================================ */
+button {
+    padding: 12px 20px;
+
+    /* 🎨 COLOR DE FONDO DEL BOTÓN */
+    background: #0038a8;
+
+    border: none;
+
+    /* 🎨 COLOR DEL TEXTO DEL BOTÓN */
+    color: white;
+
+    /* 🔵 Redondeado del botón:
+       Más redondo → 20px
+       Cuadrado → 0px
+    */
+    border-radius: 6px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    /* 🌀 Transición suave cuando pasas el mouse */
+    transition: .3s;
+}
+
+/* ============================================================
+   EFECTO HOVER DEL BOTÓN
+   ============================================================ */
+button:hover {
+    /* 🎨 Color del botón cuando pasas el mouse
+       Puedes hacerlo más claro o más oscuro
+    */
+    background: #0250d6;
+}
+
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi primera web</title>
+
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<Body>
+
+<header>
+
+<h1>Blog One</h1>
+
+    <main>
+        <p>Blog One, es una plataforma web para conocer gente.</p>
+
+        <!-- BOTÓN -->
+        <button id="btnCambiarFondo">Cambiar Fondo</button>
+    </main>
+
+
+
+
+
+
+
+</header>
+
+
+
+
+</Body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+<script>/* ============================================================
+   1. SELECCIONAR EL BOTÓN
+   - Aquí buscamos el botón por su ID: "btnCambiarFondo"
+   - Importante: el ID debe coincidir con el del HTML
+   ============================================================ */
+const boton = document.getElementById("btnCambiarFondo");
+
+
+/* ============================================================
+   2. COLORES QUE VAS A USAR
+   - Puedes agregar más colores si quieres
+   - La página cambiará entre estos colores cada vez que presiones
+   ============================================================ */
+const colores = [
+    "#0d0d0d",  // negro suave
+    "#153575ff",  // azul
+    "#ffffff",  // blanco
+];
+
+let indiceColor = 0; // Lleva la cuenta del color actual
+
+
+/* ============================================================
+   3. FUNCIÓN QUE CAMBIA EL FONDO
+   - Cada vez que llames esta función, cambiará el color de fondo
+   ============================================================ */
+function cambiarFondo() {
+    // Cambiar el fondo del body
+    document.body.style.background = colores[indiceColor];
+
+    // Pasar al siguiente color
+    indiceColor++;
+
+    // Si llega al final, vuelve al inicio
+    if (indiceColor >= colores.length) {
+        indiceColor = 0;
+    }
+}
+
+
+/* ============================================================
+   4. EVENTO DEL BOTÓN
+   - Cuando el usuario haga click en el botón,
+     se ejecutará la función cambiarFondo()
+   ============================================================ */
+boton.addEventListener("click", cambiarFondo);
+
+//# sourceURL=userscript.js
+</script>
+</body>
+</html>
